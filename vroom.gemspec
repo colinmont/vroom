@@ -15,4 +15,6 @@ Gem::Specification.new do |gem|
   gem.name          = 'vroom'
   gem.require_paths = ["lib"]
   gem.version       = Vroom::VERSION
+
+  gem.add_runtime_dependency('httparty')
 end
