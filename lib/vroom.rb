@@ -1,5 +1,5 @@
 # include vroom modules
-require 'vroom/chassis'
+require './vroom/chassis'
 
 # include vroom models
 require 'vroom/models/user'
