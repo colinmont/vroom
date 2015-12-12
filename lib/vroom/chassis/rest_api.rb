@@ -17,7 +17,8 @@ module Vroom
 
       def trip(trip_id)
         response = HTTParty.get("https://dash.by/api/chassis/v1/routes/#{trip_id}", headers: { "Authorization" => "Bearer #{self.access_token}"})
-        JSON.parse(response.body)
+        c = JSON.parse(response.body)
+        c['result']
       end
 
       def stats(startTime, endTime)
