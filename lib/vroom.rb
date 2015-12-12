@@ -1,16 +1,16 @@
 # include vroom modules
-require_relative 'vroom/chassis'
+require 'vroom/chassis'
 
 # include vroom models
-require_relative 'vroom/models/user'
-require_relative 'vroom/models/result'
-require_relative 'vroom/models/stats'
+require 'vroom/models/user'
+require 'vroom/models/result'
+require 'vroom/models/stats'
 
 # HTTP module so we can communicate with Dash
 # require 'vroom/http_service'
 
 # miscellaneous
-require_relative 'vroom/version'
+require 'vroom/version'
 
 module Vroom
   # A Ruby interface for the Dash.by Chassis API.
