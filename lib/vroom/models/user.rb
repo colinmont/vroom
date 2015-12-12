@@ -2,8 +2,8 @@ module Vroom
   module Model
     class User
       require_relative 'units'
-      require 'vroom/model/vehicle'
-      require 'vroom/model/vehicle_list'
+      require_relative 'vehicle'
+      require_relative 'vehicle_list'
 
       attr_accessor :id, :firstName, :lastName, :gender, :userProfileImageUrl, :overallScore, :preferredUnits,
                     :currentVehicle, :vehicles
