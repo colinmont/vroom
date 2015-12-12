@@ -1,7 +1,7 @@
 module Vroom
   module Model
     class User
-      require 'model/units'
+      require 'vroom/model/units'
       require 'vroom/model/vehicle'
       require 'vroom/model/vehicle_list'
 
