@@ -1,7 +1,7 @@
 module Vroom
   module Model
     class Result
-      require 'vroom/model/trips'
+      require_relative 'trips'
 
       attr_accessor :result
 
