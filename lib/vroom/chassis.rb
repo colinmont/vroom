@@ -1,4 +1,4 @@
-require 'chassis/rest_api'
+require 'vroom/chassis/rest_api'
 
 module Vroom
   module Dash
