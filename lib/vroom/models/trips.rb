@@ -8,25 +8,27 @@ module Vroom
       :startWeatherConditionsImageUrl, :endWeatherConditionsImageUrl
 
       def initialize(trips_obj)
-        @id                              = trips_obj['id']
-        @dateStart                       = trips_obj['dateStart']
-        @dateEnd                         = trips_obj['dateEnd']
-        @vehicleId                       = trips_obj['vehicleId']
-        @startAddress                    = trips_obj['startAddress']
-        @endAddress                      = trips_obj['endAddress']
-        @startLatitude                   = trips_obj['startLatitude']
-        @startLongitude                  = trips_obj['startLongitude']
-        @enendLatitudedLat               = trips_obj['enendLatitudedLat']
-        @endLongitude                    = trips_obj['endLongitude']
-        @startMapImageUrl                = trips_obj['startMapImageUrl']
-        @endMapImageUrl                  = trips_obj['endMapImageUrl']
-        @score                           = trips_obj['score']
-        @startTemperature                = trips_obj['startTemperature']
-        @endTemperature                  = trips_obj['endTemperature']
-        @startWeatherConditions          = trips_obj['startWeatherConditions']
-        @endWeatherConditions            = trips_obj['endWeatherConditions']
-        @startWeatherConditionsImageUrl  = trips_obj['startWeatherConditionsImageUrl']
-        @endWeatherConditionsImageUrl    = trips_obj['endWeatherConditionsImageUrl']
+        trips_obj.each do |t|
+          @id                              = t['id']
+          @dateStart                       = t['dateStart']
+          @dateEnd                         = t['dateEnd']
+          @vehicleId                       = t['vehicleId']
+          @startAddress                    = t['startAddress']
+          @endAddress                      = t['endAddress']
+          @startLatitude                   = t['startLatitude']
+          @startLongitude                  = t['startLongitude']
+          @enendLatitudedLat               = t['enendLatitudedLat']
+          @endLongitude                    = t['endLongitude']
+          @startMapImageUrl                = t['startMapImageUrl']
+          @endMapImageUrl                  = t['endMapImageUrl']
+          @score                           = t['score']
+          @startTemperature                = t['startTemperature']
+          @endTemperature                  = t['endTemperature']
+          @startWeatherConditions          = t['startWeatherConditions']
+          @endWeatherConditions            = t['endWeatherConditions']
+          @startWeatherConditionsImageUrl  = t['startWeatherConditionsImageUrl']
+          @endWeatherConditionsImageUrl    = t['endWeatherConditionsImageUrl']
+        end
       end
     end
   end

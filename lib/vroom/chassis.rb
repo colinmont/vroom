@@ -1,4 +1,4 @@
-require 'vroom/chassis/rest_api'
+require_relative 'chassis/rest_api'
 
 module Vroom
   module Dash
@@ -11,9 +11,9 @@ module Vroom
       end
 
       attr_reader :access_token
-      
+
       include RestAPIMethods
-      
+
     end
   end
 end
