@@ -12,7 +12,8 @@ module Vroom
 
       def trips(startTime, endTime)
         response = HTTParty.get("https://dash.by/api/chassis/v1/trips?startTime=#{startTime}&endTime=#{endTime}", headers: { "Authorization" => "Bearer #{self.access_token}"})
-        JSON.parse(response.body)
+        c = JSON.parse(response.body)
+        Vroom::Model::Trips.new(c['result'])
       end
 
       def trip(trip_id)
@@ -23,7 +24,7 @@ module Vroom
 
       def stats(startTime, endTime)
         response = HTTParty.get("https://dash.by/api/chassis/v1/stats?startTime=#{startTime}&endTime=#{endTime}", headers: { "Authorization" => "Bearer #{self.access_token}"})
-        JSON.parse(response.body)
+        Vroom::Model::Stats.new(JSON.parse(response.body))
       end
 
     end
