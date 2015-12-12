@@ -3,7 +3,7 @@ require 'vroom/chassis'
 
 # include vroom models
 require 'vroom/models/user'
-require_relative 'models/result'
+require_relative 'vroom/models/result'
 require 'vroom/models/stats'
 
 # HTTP module so we can communicate with Dash
