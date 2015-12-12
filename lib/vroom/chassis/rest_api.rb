@@ -10,10 +10,9 @@ module Vroom
         Vroom::Model::User.new(JSON.parse(response.body))
       end
 
-      def trips(startTime, endTime)
+      def results(startTime, endTime)
         response = HTTParty.get("https://dash.by/api/chassis/v1/trips?startTime=#{startTime}&endTime=#{endTime}", headers: { "Authorization" => "Bearer #{self.access_token}"})
-        c = JSON.parse(response.body)
-        Vroom::Model::Trips.new(c['result'])
+        Vroom::Model::Results.new(JSON.parse(response.body))
       end
 
       def trip(trip_id)
